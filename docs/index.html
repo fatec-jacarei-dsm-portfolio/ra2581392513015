@@ -1,11 +1,162 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Portfólio - MATHEUS DA CUNHA SOLDESI</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Matheus Soldesi — Portfólio</title>
+    <meta name="description" content="Portfólio profissional com projetos, habilidades e contato." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <h1>Bem vindo ao Portfólio de MATHEUS DA CUNHA SOLDESI</h1>
+    <header>
+        <div class="container nav">
+            <a class="brand" href="#topo" aria-label="Ir para o topo">
+                <span>Matheus Soldesi</span>
+            </a>
+            <nav class="links" aria-label="Seções do site">
+                <a href="#projetos">Projetos</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="topo" class="container">
+        <section class="hero" aria-label="Introdução">
+            <div>
+                <h1>Designer & Desenvolvedor Front‑end</h1>
+                <div class="actions">
+                    <a class="btn" href="#projetos">Ver projetos</a>
+                </div>
+            </div>
+            <div class="hero-card card" aria-label="Cartão de destaque">
+                <img src="./img/eu2.jpg" alt="" />
+            </div>
+        </section>
+
+        <section id="projetos" class="section">
+            <div class="section-head">
+                <h2>Projetos em destaque</h2>
+            </div>
+            <div class="grid projects">
+                <article class="card project">
+                    <h2>Projeto da Faculdade (ABP)</h2>
+                    <img src="./img/Projeto ABP.png" alt="Dashboard de analytics" />
+                    <div class="project-body">
+                        <p>A cada semestre, as coordenações de curso, juntamente com a secretaria acadêmica, montam os
+                            horários de aula e alocam as aulas nos ambientes da faculdade, como salas de aula e
+                            laboratórios. Normalmente, são divulgados os horários de aula para a comunidade acadêmica
+                            por meio dos murais da faculdade e e-mail. No entanto, a cada alteração no horário de
+                            professores, disciplinas ou ambientes, é necessário refazer os informes impressos.
+
+                            A partir dessa problemática, surgiu a necessidade de um sistema para a consulta dos horários
+                            das aulas por curso, ambiente, turno (diurno e noturno) e turma.</p>
+                        <div class="chips">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="grid projects">
+                <article class="card project">
+                    <h2>Potato Card Wars</h2>
+                    <div class="project-images">
+                        <img src="./img/Potato-capa.png" alt="Capa do projeto" />
+                        <img src="./img/Potato.png" alt="Preview do projeto" />
+                    </div>
+                    <div class="project-body">
+                        <p>
+                            Potato Card Wars é um jogo de cartas estratégico e divertido, onde batatas ganham vida em
+                            batalhas épicas!
+                            Cada carta representa um personagem único, com elemento (Terra, Água ou Fogo) e valor de
+                            força, que determinam quem vence os duelos.
+
+                            O jogo mistura sorte, tática e criatividade, permitindo que cada partida seja diferente da
+                            anterior.
+                            Além disso, eventos inesperados podem mudar o rumo da disputa, deixando tudo ainda mais
+                            emocionante!
+
+                            O Potato Card Wars é simples de aprender,
+                            mas cheio de possibilidades para quem gosta de testar estratégias e se surpreender a cada
+                            rodada.
+                        </p>
+                        <p>
+                            No Modo Descarte, as cartas de batata entram em uma disputa mais rápida e divertida!
+                            Aqui, os jogadores competem para ser o primeiro a ficar sem cartas na mão, usando as forças
+                            e elementos (Terra, Água, Fogo e Raio) no lugar das cartas especiais tradicionais.
+
+                            É a mistura perfeita entre o clássico estilo UNO e a essência estratégica do Potato Card
+                            Wars, garantindo partidas dinâmicas e cheias de risadas.
+                        </p>
+                        <div class="chips">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+
+        <!-- HABILIDADES -->
+        <section id="habilidades" class="section">
+            <div class="section-head">
+                <h2>Habilidades</h2>
+            </div>
+            <ul class="skills card">
+                <li>• Boa comunicação • Proatividade • Trabalho em Equipe • Rápida adaptação</li>
+                <li><strong>Front‑end:</strong> <img class="icone" src="./img/HTML icone.webp" alt="">
+                    <img class="icone" src="./img/CSS icone.png" alt="">
+                    <img class="icone" src="./img/JS icone.webp" alt="">
+                    <img class="icone" src="./img/TS icone.png" alt="">
+                    <img class="icone" src="./img/React-icon.png" alt="">
+                </li>
+                <li><strong>Back‑end:</strong> <img class="icone" src="./img/node js icone.webp" alt=""></li>
+            </ul>
+        </section>
+
+        <section id="sobre" class="section">
+            <div class="section-head">
+                <h2>Sobre mim</h2>
+            </div>
+            <div class="skill card">
+                <p>Sou estudante de Desenvolvimento de Software Multiplataforma na FATEC Jacareí, com grande interesse
+                    em tecnologia, inovação e soluções que impactem positivamente a vida das pessoas. Busco uma
+                    oportunidade de estágio para aplicar e ampliar meus conhecimentos na prática, colaborando com
+                    equipes e aprendendo com os desafios do dia a dia. Trabalho bem em grupo, sou proativo, comunicativo
+                    e estou sempre disposto a aprender algo novo.
+                </p>
+            </div>
+        </section>
+
+        <div class="section-head">
+            <h2>Links</h2>
+        </div>
+
+        <ul class="skills card links-final">
+            <a href="https://github.com/Soldesi">Github</a>
+            <a href="https://www.linkedin.com/in/matheus-soldesi-790122372/">Linkedin</a>
+        </ul>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="ano"></span> Matheus da Cunha Soldesi.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('ano').textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
