@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Matheus Soldesi — Portfólio</title>
     <meta name="description" content="Portfólio profissional com projetos, habilidades e contato." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -23,6 +19,7 @@
                 <a href="#projetos">Projetos</a>
                 <a href="#habilidades">Habilidades</a>
                 <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
             </nav>
         </div>
     </header>
@@ -53,10 +50,19 @@
                             horários de aula e alocam as aulas nos ambientes da faculdade, como salas de aula e
                             laboratórios. Normalmente, são divulgados os horários de aula para a comunidade acadêmica
                             por meio dos murais da faculdade e e-mail. No entanto, a cada alteração no horário de
-                            professores, disciplinas ou ambientes, é necessário refazer os informes impressos.
-
-                            A partir dessa problemática, surgiu a necessidade de um sistema para a consulta dos horários
-                            das aulas por curso, ambiente, turno (diurno e noturno) e turma.</p>
+                            professores, disciplinas ou ambientes, é necessário refazer os informes impressos. A partir
+                            dessa problemática, surgiu a necessidade de um sistema para a consulta dos horários das
+                            aulas por curso, ambiente, turno (diurno e noturno) e turma.</p>
+                        <p>No desenvolvimento do sistema de consulta de horários, atuei principalmente como
+                            desenvolvedor front-end, sendo responsável pela criação e estilização das páginas dos
+                            cursos, garantindo uma interface clara e organizada para os usuários. Além disso, desenvolvi
+                            o botão e o script para a funcionalidade de download em PDF, possibilitando que os alunos e
+                            professores salvem os horários de forma prática.</p>
+                        <p>Também contribuí para a correção de problemas de CSS, melhorando o layout e a experiência
+                            visual do sistema. Trabalhei ainda na parte de responsividade do site (media queries),
+                            adaptando as páginas para que funcionassem corretamente em diferentes dispositivos e
+                            tamanhos de tela. Dessa forma, minhas principais atividades estiveram focadas em tornar a
+                            aplicação mais acessível, funcional e intuitiva para a comunidade acadêmica.</p>
                         <div class="chips">
                             <span>HTML</span><span>CSS</span><span>JavaScript</span>
                         </div>
@@ -111,7 +117,8 @@
                 <h2>Habilidades</h2>
             </div>
             <ul class="skills card">
-                <li>• Boa comunicação • Proatividade • Trabalho em Equipe • Rápida adaptação</li>
+                <li><strong>• Boa comunicação • Proatividade • Trabalho em Equipe • Rápida adaptação</strong></li>
+                <li><strong> • Português: (Nativo) • inglês: (intermediário)</strong></li>
                 <li><strong>Front‑end:</strong> <img class="icone" src="./img/HTML icone.webp" alt="">
                     <img class="icone" src="./img/CSS icone.png" alt="">
                     <img class="icone" src="./img/JS icone.webp" alt="">
@@ -128,12 +135,42 @@
             </div>
             <div class="skill card">
                 <p>Sou estudante de Desenvolvimento de Software Multiplataforma na FATEC Jacareí, com grande interesse
-                    em tecnologia, inovação e soluções que impactem positivamente a vida das pessoas. Busco uma
-                    oportunidade de estágio para aplicar e ampliar meus conhecimentos na prática, colaborando com
-                    equipes e aprendendo com os desafios do dia a dia. Trabalho bem em grupo, sou proativo, comunicativo
-                    e estou sempre disposto a aprender algo novo.
+                    em tecnologia, inovação e no desenvolvimento de soluções que tragam impacto positivo para a vida das
+                    pessoas. Tenho buscado constantemente aprimorar meus conhecimentos em programação, design de
+                    interfaces e boas práticas de desenvolvimento de software, unindo teoria e prática para criar
+                    aplicações funcionais e intuitivas.
                 </p>
+                <p>Atualmente, procuro uma oportunidade de estágio que me permita aplicar minhas habilidades em um
+                    ambiente real de trabalho, contribuindo com a equipe e aprendendo com os desafios do dia a dia.
+                    Tenho inglês intermediário, o que me possibilita acompanhar conteúdos técnicos, documentações e me
+                    comunicar em situações relacionadas à área.</p>
+                <p>Sou uma pessoa proativa, comunicativa e adaptável, com facilidade para trabalhar em equipe e
+                    disposição para aprender novas tecnologias. Acredito que colaboração, dedicação e aprendizado
+                    contínuo são essenciais para o crescimento profissional e para o sucesso de qualquer projeto.</p>
             </div>
+        </section>
+        <!-- CONTATO -->
+        <section id="contato" class="section">
+            <div class="section-head">
+                <h2>Contato</h2>
+            </div>
+            <form class="contact card" action="https://formspree.io/f/xgejglvq" method="POST">
+                <div class="grid2">
+                    <label>
+                        Nome
+                        <input type="text" name="nome" placeholder="Digite seu nome" required />
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" name="email" placeholder="Digite seu email" required />
+                    </label>
+                </div>
+                <label>
+                    Mensagem
+                    <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+                </label>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
         </section>
 
         <div class="section-head">
@@ -144,6 +181,11 @@
             <a href="https://github.com/Soldesi">Github</a>
             <a href="https://www.linkedin.com/in/matheus-soldesi-790122372/">Linkedin</a>
         </ul>
+        <div class="actions">
+            <a class="btn-curriculo " href="./curriculo.pdf" download="Curriculo-Matheus-Soldesi.pdf">
+                📄 Baixar Currículo
+            </a>
+        </div>
 
         </section>
     </main>

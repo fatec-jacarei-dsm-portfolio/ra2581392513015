@@ -55,9 +55,11 @@ img {
 .container {
     width: min(1120px, 92%);
     margin: 0 auto;
+    margin-top: -30px;
 }
-
-/* Header */
+.section {
+  scroll-margin-top: 70px;
+}
 header {
     position: sticky;
     top: 0;
@@ -175,6 +177,38 @@ header {
     outline-offset: 2px;
 }
 
+.btn-curriculo {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 5%;
+    background: transparent;
+    color: var(--text);
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-left: -5px;
+    border: 1px solid color-mix(in oklab, var(--muted) 22%, transparent);
+}
+
+.btn-curriculo:hover {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #0b0f15;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(249, 115, 22, 0.45);
+}
+
+.btn-curriculo:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: all 0.5s ease;
+}
 
 .hero {
     display: grid;
@@ -311,21 +345,21 @@ h1 {
 }
 
 .chips span {
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid color-mix(in oklab, var(--muted) 22%, transparent);
-  color:#000000;
-  background: transparent;
-  transition: all 0.3s ease;
-  cursor: default;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid color-mix(in oklab, var(--muted) 22%, transparent);
+    color: #000000;
+    background: transparent;
+    transition: all 0.3s ease;
+    cursor: default;
 }
 
 .chips span:hover {
-  color: #000000;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.45);
+    color: #000000;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.45);
 }
 
 
@@ -357,49 +391,94 @@ h1 {
     border: 1px solid color-mix(in oklab, var(--muted) 18%, transparent);
     margin-left: -24px;
 }
+
 .skills.links-final {
-  display: flex;
-  gap: 36px;
-  padding: 16px;
+    display: flex;
+    gap: 36px;
+    padding: 16px;
 }
 
 .links-final a {
-  display: inline-block;
-  padding: 10px 16px;
-  border-radius: 5%;
-  background: transparent; 
-  color: var(--text);      
-  font-weight: bold;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  margin-left: -20px;
-  border: 1px solid color-mix(in oklab, var(--muted) 22%, transparent); 
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 5%;
+    background: transparent;
+    color: var(--text);
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-left: -20px;
+    border: 1px solid color-mix(in oklab, var(--muted) 22%, transparent);
 }
 
 .links-final a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
-  transition: all 0.5s ease;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: all 0.5s ease;
 }
 
 .links-final a:hover {
-  background: linear-gradient(135deg, var(--primary), var(--accent)); 
-  color: #0b0f15; 
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.45);
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #0b0f15;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(249, 115, 22, 0.45);
 }
 
 .links-final a:hover::before {
-  left: 100%;
+    left: 100%;
 }
 
+.contact.card {
+    padding: 24px;
+    display: grid;
+    gap: 16px;
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.contact label {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid color-mix(in oklab, var(--muted) 22%, transparent);
+    background: color-mix(in oklab, var(--card) 80%, transparent);
+    color: var(--text);
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--ring);
+    outline: none;
+}
+
+.contact textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact button {
+    margin-top: 8px;
+    align-self: flex-start;
+    width: 70px;
+}
 
 
 .about {
@@ -464,4 +543,7 @@ textarea:focus {
     .projects {
         grid-template-columns: 1fr;
     }
+    .section {
+    scroll-margin-top: 80px;
+  }
 }
