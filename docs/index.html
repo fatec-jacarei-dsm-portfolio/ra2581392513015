@@ -15,27 +15,35 @@
             <a class="brand" href="#topo" aria-label="Ir para o topo">
                 <span>Matheus Soldesi</span>
             </a>
-            <nav class="links" aria-label="Seções do site">
+
+            <nav class="links" id="nav-links" aria-label="Seções do site">
                 <a href="#sobre">Sobre</a>
                 <a href="#projetos">Projetos</a>
                 <a href="#habilidades">Habilidades</a>
                 <a href="#contato">Contato</a>
             </nav>
+
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
     <main id="topo" class="container-main">
         <section class="hero" aria-label="Introdução">
             <div>
-                <h1>Designer & Desenvolvedor Front‑end</h1>
+                <h1>Designer & Desenvolvedor Front-end</h1>
                 <div>
                     <a class="btn-projeto" href="#projetos">Ver projetos</a>
                 </div>
             </div>
             <div class="hero-card card" aria-label="Cartão de destaque">
-                <img src="./img/eu2.jpg" alt="" />
+                <img src="./img/eu2.jpg" alt="Foto do Matheus" />
             </div>
         </section>
+
         <section id="sobre" class="section">
             <div class="section-head">
                 <h2>Sobre mim</h2>
@@ -56,118 +64,269 @@
                     contínuo são essenciais para o crescimento profissional e para o sucesso de qualquer projeto.</p>
             </div>
         </section>
+
         <section id="projetos" class="section">
             <div class="section-head">
                 <h2>Projetos em destaque</h2>
             </div>
+
             <div class="grid projects">
-                <article class="card project">
-                    <h3>Projeto da Faculdade (ABP)</h3>
-                    <img src="./img/Projeto ABP.png" alt="Dashboard de analytics" />
+                <article class="card project" onclick="openModal('modal-abp')">
+                    <img src="./img/ABP-capa.png" alt="Projeto ABP" />
                     <div class="project-body">
-                        <p>A cada semestre, as coordenações de curso, juntamente com a secretaria acadêmica, montam os
-                            horários de aula e alocam as aulas nos ambientes da faculdade, como salas de aula e
-                            laboratórios. Normalmente, são divulgados os horários de aula para a comunidade acadêmica
-                            por meio dos murais da faculdade e e-mail. No entanto, a cada alteração no horário de
-                            professores, disciplinas ou ambientes, é necessário refazer os informes impressos. A partir
-                            dessa problemática, surgiu a necessidade de um sistema para a consulta dos horários das
-                            aulas por curso, ambiente, turno (diurno e noturno) e turma.</p>
-                        <p>No desenvolvimento do sistema de consulta de horários, atuei principalmente como
-                            desenvolvedor front-end, sendo responsável pela criação e estilização das páginas dos
-                            cursos, garantindo uma interface clara e organizada para os usuários. Além disso, desenvolvi
-                            o botão e o script para a funcionalidade de download em PDF, possibilitando que os alunos e
-                            professores salvem os horários de forma prática.</p>
-                        <p>Também contribuí para a correção de problemas de CSS, melhorando o layout e a experiência
-                            visual do sistema. Trabalhei ainda na parte de responsividade do site (media queries),
-                            adaptando as páginas para que funcionassem corretamente em diferentes dispositivos e
-                            tamanhos de tela. Dessa forma, minhas principais atividades estiveram focadas em tornar a
-                            aplicação mais acessível, funcional e intuitiva para a comunidade acadêmica.</p>
+                        <h3>Projeto da Faculdade (ABP)</h3>
+                        <p>Sistema para consulta de horários das aulas da FATEC Jacareí.</p>
+                        <div class="chips">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>SQL</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project" onclick="openModal('modal-Hollow')">
+                    <img src="./img/HK-capa.png" alt="Guia Hollow Knight" />
+                    <div class="project-body">
+                        <h3>Guia Hollow Knight</h3>
+                        <p>Um site completo com informações, mapas e segredos de Hallownest, feito para ajudar jogadores
+                            a explorarem o mundo de Hollow Knight.</p>
+                        <div class="chips">
+                            <span>React</span><span>TypeScript</span>
+                        </div>
+                        
+                    </div>
+                </article>
+
+                <article class="card project" onclick="openModal('modal-curriculo')">
+                    <img src="./img/Curriculo iteligente.png" alt="Currículo Inteligente" />
+                    <div class="project-body">
+                        <h3>Currículo Inteligente</h3>
+                        <p>Criação e personalização de currículos de forma dinâmica</p>
                         <div class="chips">
                             <span>HTML</span><span>CSS</span><span>JavaScript</span>
                         </div>
                     </div>
                 </article>
 
-            </div>
-
-            <div class="grid projects">
-                <article class="card project">
-                    <h3>Potato Card Wars</h3>
-                    <div class="project-images">
-                        <img src="./img/Potato-capa.png" alt="Capa do projeto" />
-                        <img src="./img/Potato.png" alt="Preview do projeto" />
-                    </div>
+                <article class="card project hidden-project" onclick="openModal('modal-extra-1')">
+                    <img src="./img/Jogo-Memoria.png" alt="Jogo-Memoria" />
                     <div class="project-body">
-                        <p>
-                            Potato Card Wars é um jogo de cartas estratégico e divertido, onde batatas ganham vida em
-                            batalhas épicas!
-                            Cada carta representa um personagem único, com elemento (Terra, Água ou Fogo) e valor de
-                            força, que determinam quem vence os duelos.
-
-                            O jogo mistura sorte, tática e criatividade, permitindo que cada partida seja diferente da
-                            anterior.
-                            Além disso, eventos inesperados podem mudar o rumo da disputa, deixando tudo ainda mais
-                            emocionante!
-
-                            O Potato Card Wars é simples de aprender,
-                            mas cheio de possibilidades para quem gosta de testar estratégias e se surpreender a cada
-                            rodada.
-                        </p>
-                        <p>
-                            No Modo Descarte, as cartas de batata entram em uma disputa mais rápida e divertida!
-                            Aqui, os jogadores competem para ser o primeiro a ficar sem cartas na mão, usando as forças
-                            e elementos (Terra, Água, Fogo e Raio) no lugar das cartas especiais tradicionais.
-
-                            É a mistura perfeita entre o clássico estilo UNO e a essência estratégica do Potato Card
-                            Wars, garantindo partidas dinâmicas e cheias de risadas.
-                        </p>
-                        <div class="chips">
-                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                        </div>
+                        <h3>Jogo da Memória</h3>
+                        <p>Descrição curta do projeto extra 1.</p>
+                        <div class="chips"><span>React</span><span>TypeScript</span></div>
                     </div>
                 </article>
-            </div>
+
+                <div class="projects-actions" style="text-align:center;margin-top:18px;">
+                    <a id="loadMoreProjects" class="btn-projeto" href="#projetos" role="button" aria-expanded="false">
+                        Ver mais projetos
+                    </a>
+                </div>
 
         </section>
+
+        <div id="modal-abp" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-abp')">&times;</span>
+                <h2>Projeto da Faculdade (ABP)</h2>
+                <img src="./img/Projeto ABP.png" alt="Projeto ABP" />
+                <h3>Sobre o projeto</h3>
+                <p>A cada semestre, as coordenações de curso, juntamente com a secretaria acadêmica, montam os horários
+                    de aula e alocam as aulas nos ambientes da faculdade, como salas de aula e laboratórios.
+                    Normalmente, são divulgados os horários de aula para a comunidade acadêmica por meio dos murais da
+                    faculdade e e-mail. No entanto, a cada alteração no horário de professores, disciplinas ou
+                    ambientes, é necessário refazer os informes impressos. A partir dessa problemática, surgiu a
+                    necessidade de um sistema para a consulta dos horários das aulas por curso, ambiente, turno (diurno
+                    e noturno) e turma.</p>
+                <p>No desenvolvimento do sistema de consulta de horários, atuei principalmente como desenvolvedor
+                    front-end, sendo responsável pela criação e estilização das páginas dos cursos, garantindo uma
+                    interface clara e organizada para os usuários. Além disso, desenvolvi o botão e o script para a
+                    funcionalidade de download em PDF, possibilitando que os alunos e professores salvem os horários de
+                    forma prática.</p>
+                <p>Também contribuí para a correção de problemas de CSS, melhorando o layout e a experiência visual do
+                    sistema. Trabalhei ainda na parte de responsividade do site (media queries), adaptando as páginas
+                    para que funcionassem corretamente em diferentes dispositivos e tamanhos de tela. Dessa forma,
+                    minhas principais atividades estiveram focadas em tornar a aplicação mais acessível, funcional e
+                    intuitiva para a comunidade acadêmica.</p>
+                <div class="chips">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>SQL</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-Hollow" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-Hollow')">&times;</span>
+                <h2>Guia Hollow Knight</h2>
+                <img src="./img/Guia.png" alt="Guia Hollow Knight" />
+                <h3>Sobre o projeto</h3>
+                <p>O Guia Hollow Knight é um portal completo dedicado a todos os aventureiros de Hallownest! Criado para
+                    ajudar jogadores iniciantes e veteranos, o site reúne informações detalhadas sobre chefes, áreas,
+                    habilidades, amuletos e segredos escondidos pelo vasto mundo subterrâneo do jogo.</p>
+                <p>Com um visual inspirado no estilo artístico da Team Cherry, o guia oferece uma experiência imersiva e
+                    organizada — cada seção foi cuidadosamente projetada para facilitar a navegação e tornar a
+                    exploração mais intuitiva. Você pode descobrir rotas de progressão, estratégias de combate e até
+                    curiosidades sobre a história do Cavaleiro e dos outros personagens marcantes.</p>
+                <p>Mais do que um simples guia, este projeto é uma homenagem ao universo de Hollow Knight: um espaço
+                    para aprender, explorar e se apaixonar ainda mais por Hallownest!</p>
+                <div class="chips"> <span>React</span><span>TypeScript</span></div>
+                <span class="btn" style="margin-top: 10px;">
+                    <a href="https://soldesi.github.io/Hollow-Knight-Guia/" target="_blank" class="btn-site">Acessar
+                        Site</a>
+                </span>
+            </div>
+        </div>
+
+        <div id="modal-curriculo" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-curriculo')">&times;</span>
+                <h2>Curriculo Inteligente</h2>
+                <img src="./img/Curriculo iteligente.png" alt="Currículo Inteligente" />
+                <h3>Sobre o projeto</h3>
+                <p>O Currículo Inteligente é uma aplicação web interativa que permite a criação e personalização de
+                    currículos de forma dinâmica, combinando design moderno com funcionalidades práticas. O objetivo
+                    principal é facilitar a geração de currículos profissionais, permitindo que o usuário configure
+                    visualmente o layout, o tema e o conteúdo, além de pré-visualizar e exportar o resultado final em
+                    PDF.</p>
+                <h3>Com ela, você pode:</h3>
+                <p>• Preencher seus dados facilmente em um formulário intuitivo;</p>
+                <p>• entre diferentes modelos de layout e temas;</p>
+                <p>• Visualizar instantaneamente uma prévia real do seu currículo;</p>
+                <p>• Exportar o resultado final em PDF ou adaptar o conteúdo para redes profissionais, como o LinkedIn.
+                </p>
+                <p>O objetivo é facilitar a criação de currículos profissionais que transmitam credibilidade e
+                    impacto, mesmo para quem não tem experiência em design.</p>
+                <div class="chips">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-extra-1" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-extra-1')">&times;</span>
+                <h2>Jogo da Memória</h2>
+                <img src="./img/memoria-acerto.png" alt="Jogo-Memoria" />
+                <h3>Sobre o projeto</h3>
+                <p>O Jogo da Memória é um clássico divertido que desafia sua atenção e concentração! O objetivo é
+                    simples: encontrar os pares de cartas iguais, virando duas por vez e tentando lembrar onde cada uma
+                    está. Mas não se engane — conforme as cartas aumentam, a dificuldade também cresce, tornando cada
+                    rodada ainda mais empolgante.</p>
+                <p>O diferencial do nosso jogo está no design moderno e na jogabilidade fluida: as cartas possuem
+                    animações de virar, o tabuleiro é responsivo e o sistema acompanha seus acertos e movimentos em
+                    tempo real. Cada partida é rápida, envolvente e sempre traz aquela vontade de jogar “só mais uma
+                    vez”.</p>
+                <p>O Jogo da Memória é fácil de aprender, acessível para todas as idades e perfeito tanto para passar o
+                    tempo quanto para treinar o cérebro de forma leve e divertida!</p>
+                <div class="chips"><span>React</span><span>TypeScript</span></div>
+            </div>
+        </div>
 
         <section id="habilidades" class="section">
             <div class="section-head">
                 <h2>Habilidades</h2>
             </div>
-            <ul class="skills card">
-                <li><strong>• Boa comunicação • Proatividade • Trabalho em Equipe • Rápida adaptação</strong></li>
-                <li><strong> • Português: (Nativo) • inglês: (intermediário)</strong></li>
-                <li><strong>Front‑end:</strong> <img class="icone" src="./img/HTML icone.webp" alt="">
-                    <img class="icone" src="./img/CSS icone.png" alt="">
-                    <img class="icone" src="./img/JS icone.webp" alt="">
-                    <img class="icone" src="./img/TS icone.png" alt="">
-                    <img class="icone" src="./img/React-icon.png" alt="">
-                </li>
-                <li><strong>Back‑end:</strong> <img class="icone" src="./img/node js icone.webp" alt=""></li>
-            </ul>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Soft Skills :</h3>
+                    <p> Trabalho em equipe • Proatividade • Comunicação • Adaptação</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Idiomas : </h3>
+                    <p>Português (Nativo) • Inglês (Intermediário)</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Front-end :</h3>
+                    <div class="skill-icons">
+                        <img src="./img/HTML icone.webp" alt="HTML">
+                        <img src="./img/CSS icone.png" alt="CSS">
+                        <img src="./img/JS icone.webp" alt="JS">
+                        <img src="./img/TS icone.png" alt="TS">
+                        <img src="./img/React-icon.png" alt="React">
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Back-end :</h3>
+                    <div class="skill-icons">
+                        <img src="./img/node js icone.webp" alt="Node.js">
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="contato" class="section">
             <div class="section-head">
                 <h2>Contato</h2>
             </div>
-            <form class="contact card" action="https://formspree.io/f/xgejglvq" method="POST">
-                <div class="grid2">
-                    <label>
-                        Nome
-                        <input type="text" name="nome" placeholder="Digite seu nome" required />
+
+            <div class="grid" style="grid-template-columns: 1fr 360px; gap: 20px;">
+                <form id="contactForm" class="contact card" method="POST" novalidate>
+                    <div class="grid2">
+                        <label for="nome">Nome
+                            <input id="nome" name="nome" type="text" placeholder="Digite seu nome" required />
+                        </label>
+
+                        <label for="email">Email
+                            <input id="email" name="email" type="email" placeholder="Digite seu email" required />
+                        </label>
+                    </div>
+
+                    <label for="phone">Telefone (opcional)
+                        <input id="phone" name="phone" type="tel" placeholder="(DDD) 9XXXX-XXXX" inputmode="tel" />
                     </label>
-                    <label>
-                        Email
-                        <input type="email" name="email" placeholder="Digite seu email" required />
+
+                    <label style="display:none">
+                        Deixe em branco
+                        <input name="_hp" tabindex="-1" autocomplete="off">
                     </label>
-                </div>
-                <label>
-                    Mensagem
-                    <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
-                </label>
-                <button type="submit" class="btn">Enviar</button>
-            </form>
+
+                    <label for="mensagem">Mensagem
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..."
+                            required></textarea>
+                    </label>
+
+                    <div style="display:flex;gap:12px;align-items:center;margin-top:6px;">
+                        <button id="submitBtn" type="submit" class="btn"
+                            style="width:auto;"><strong>Enviar</strong></button>
+                        <div id="formMessage" role="status" aria-live="polite"
+                            style="color:var(--muted);font-size:14px;"></div>
+                    </div>
+                </form>
+
+                <aside class="contact card" aria-label="Informações de contato"
+                    style="display:flex;flex-direction:column;gap:12px;">
+                    <div>
+                        <h3 style="margin:0;color:var(--primary);font-size:18px;">Fale pelo Instagram</h3>
+                    </div>
+
+                    <div style="display:flex;gap:10px;align-items:center;">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+                            alt="Instagram" width="42" height="42"
+                            style="opacity:.95;border-radius:8px;background:transparent;padding:6px;">
+                        <div>
+                            <div id="displayInsta" style="font-weight:700">@matheussoldesi</div>
+                        </div>
+                    </div>
+
+                    <a id="instaBtn" class="links-final" href="https://www.instagram.com/matheussoldesi/"
+                        target="_blank" rel="noopener"
+                        style="display:inline-flex;align-items:center;gap:10px;padding:10px 12px;width:100%;justify-content:center;">
+                        <span class="btn" style="width:100%;display:inline-flex;justify-content:center;">
+                            <strong>Abrir no Instagram</strong>
+                        </span>
+                    </a>
+
+
+                    <hr
+                        style="border:none;border-top:1px dashed color-mix(in oklab, var(--muted) 18%, transparent);opacity:.12;margin:8px 0;">
+
+                    <div style="font-size:13px;color:var(--muted);">
+                        <div><strong>Email:</strong>
+                            <a href="mailto:matheus.soldesi@gmail.com"
+                                style="color:var(--text);">matheus.soldesi@gmail.com</a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
         </section>
 
         <div class="section-head">
@@ -178,18 +337,18 @@
             <a href="https://github.com/Soldesi">Github</a>
             <a href="https://www.linkedin.com/in/matheus-soldesi-790122372/">Linkedin</a>
         </ul>
+
         <div class="actions">
             <a class="btn-curriculo " href="./curriculo.pdf" download="Curriculo-Matheus-Soldesi.pdf">
                 📄 Baixar Currículo
             </a>
         </div>
 
-        </section>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>© <span id="ano"></span>2025 Matheus da Cunha Soldesi — Desenvolvedor Front-End. Todos os direitos
+            <p>© <span id="ano"></span> Matheus da Cunha Soldesi — Desenvolvedor Front-End. Todos os direitos
                 reservados.
             </p>
         </div>
@@ -198,6 +357,8 @@
     <script>
         document.getElementById('ano').textContent = new Date().getFullYear();
     </script>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
