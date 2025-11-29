@@ -91,7 +91,19 @@
                         <div class="chips">
                             <span>React</span><span>TypeScript</span>
                         </div>
-                        
+
+                    </div>
+                </article>
+
+                <article class="card project" onclick="openModal('modal-abp2')">
+                    <img src="./img/ABP2-capa.png" alt="Devflow Analytics — capa" />
+                    <div class="project-body">
+                        <h3>Devflow Analytics (ABP 2)</h3>
+                        <p>Plataforma para centralizar, visualizar e disponibilizar dados limnológicos e meteorológicos
+                            dos projetos sobre o Balanço de Carbono nos reservatórios de Furnas.</p>
+                        <div class="chips">
+                    <span>React</span><span>TypeScript</span><span>Docker</span>
+                        </div>
                     </div>
                 </article>
 
@@ -167,11 +179,34 @@
                     curiosidades sobre a história do Cavaleiro e dos outros personagens marcantes.</p>
                 <p>Mais do que um simples guia, este projeto é uma homenagem ao universo de Hollow Knight: um espaço
                     para aprender, explorar e se apaixonar ainda mais por Hallownest!</p>
-                <div class="chips"> <span>React</span><span>TypeScript</span></div>
-                <span class="btn" style="margin-top: 10px;">
+                <div class="chips"> </div>
+                <span class="btn" style="margin-top: 10px;"><span>React</span><span>TypeScript</span>
                     <a href="https://soldesi.github.io/Hollow-Knight-Guia/" target="_blank" class="btn-site">Acessar
                         Site</a>
                 </span>
+            </div>
+        </div>
+
+        <div id="modal-abp2" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-abp2')">&times;</span>
+                <h2>Devflow Analytics (ABP 2)</h2>
+                <img src="./img/Projeto ABP2.png" alt="Devflow Analytics" />
+                <h3>Sobre o projeto</h3>
+                <p>O Devflow Analytics é uma plataforma desenvolvida para centralizar, visualizar e disponibilizar dados
+                    limnológicos e meteorológicos coletados nos projetos de pesquisa sobre o Balanço de Carbono nos
+                    reservatórios da Furnas Centrais Elétricas S.A., em cooperação com INPE, UFRJ, UFJF e IIE.</p>
+                <p>A plataforma integra duas fontes principais de dados: campanhas de campo, com parâmetros limnológicos
+                    coletados manualmente em pontos de amostragem, e o Monitoramento SIMA, que fornece séries temporais
+                    automatizadas pelo Sistema Integrado de Monitoração Ambiental do INPE. Com essas fontes reunidas,
+                    pesquisadores e técnicos podem filtrar, comparar e exportar conjuntos de dados de forma prática.</p>
+                <p>No desenvolvimento, atuei principalmente como desenvolvedor front-end, responsável pela criação e
+                    estilização da interface — incluindo o painel interativo para filtragem por instituição,
+                    reservatório e período, tabelas dinâmicas para consulta de dados brutos, a funcionalidade de
+                    exportação CSV e o mapa interativo com os pontos de coleta.</p>
+                <div class="chips">
+                    <span>React</span><span>TypeScript</span><span>Docker</span>
+                </div>
             </div>
         </div>
 
