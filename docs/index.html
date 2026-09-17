@@ -6,10 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Matheus Soldesi — Portfólio</title>
     <meta name="description" content="Portfólio profissional com projetos, habilidades e contato." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <div class="announce-bar">
+        <div class="container announce-inner">
+            <p>Disponível para estágio em desenvolvimento Front-end — vamos conversar.</p>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="announce-arrow">
+                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+    </div>
+
     <header>
         <div class="container nav">
             <a class="brand" href="#topo" aria-label="Ir para o topo">
@@ -33,19 +47,44 @@
 
     <main id="topo" class="container-main">
         <section class="hero" aria-label="Introdução">
-            <div>
-                <h1>Designer & Desenvolvedor Front-end</h1>
-                <div>
-                    <a class="btn-projeto" href="#projetos">Ver projetos</a>
+            <div class="hero-banner"></div>
+            <div class="hero-row">
+                <div class="hero-avatar">
+                    <img src="./img/eu2.jpg" alt="Foto do Matheus" />
                 </div>
-            </div>
-            <div class="hero-card card" aria-label="Cartão de destaque">
-                <img src="./img/eu2.jpg" alt="Foto do Matheus" />
+                <div class="hero-info">
+                    <h1>Matheus Soldesi</h1>
+                    <p class="hero-role">Designer & Desenvolvedor Front-end</p>
+                    <p class="hero-location">Jacareí, São Paulo — Brasil</p>
+                </div>
+                <div class="hero-actions-col">
+                    <div class="social-row">
+                        <a href="https://github.com/Soldesi" target="_blank" rel="noopener" class="social-icon"
+                            aria-label="Github">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt=""
+                                width="18" height="18" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/matheus-soldesi-790122372/" target="_blank" rel="noopener"
+                            class="social-icon" aria-label="LinkedIn">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt=""
+                                width="18" height="18" />
+                        </a>
+                        <a href="https://www.instagram.com/matheussoldesi/" target="_blank" rel="noopener"
+                            class="social-icon" aria-label="Instagram">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt=""
+                                width="18" height="18" />
+                        </a>
+                    </div>
+                    <a class="btn-cta" href="#contato">Fale comigo</a>
+                </div>
             </div>
         </section>
 
+        <div class="divider"></div>
+
         <section id="sobre" class="section">
             <div class="section-head">
+                <p class="eyebrow">Sobre</p>
                 <h2>Sobre mim</h2>
             </div>
             <div class="skill card">
@@ -63,16 +102,33 @@
                     disposição para aprender novas tecnologias. Acredito que colaboração, dedicação e aprendizado
                     contínuo são essenciais para o crescimento profissional e para o sucesso de qualquer projeto.</p>
             </div>
+
+            <div class="badges-block">
+                <p class="badges-label">Tecnologias</p>
+                <div class="badges-row">
+                    <span class="badge">HTML</span>
+                    <span class="badge">CSS</span>
+                    <span class="badge">JavaScript</span>
+                    <span class="badge">TypeScript</span>
+                    <span class="badge">React</span>
+                    <span class="badge">Node.js</span>
+                    <span class="badge">SQL</span>
+                    <span class="badge">MongoDB</span>
+                </div>
+            </div>
         </section>
+
+        <div class="divider"></div>
 
         <section id="projetos" class="section">
             <div class="section-head">
+                <p class="eyebrow">Portfólio</p>
                 <h2>Projetos em destaque</h2>
             </div>
 
-            <div class="grid projects">
-                <article class="card project" onclick="openModal('modal-abp')">
-                    <img src="./img/ABP-capa.png" alt="Projeto ABP" />
+            <div class="projects-grid projects">
+                <article class="project" onclick="openModal('modal-abp')">
+                    <div class="project-thumb"><img src="./img/ABP-capa.png" alt="Projeto ABP" /></div>
                     <div class="project-body">
                         <h3>Projeto da Faculdade (ABP)</h3>
                         <p>Sistema para consulta de horários das aulas da FATEC Jacareí.</p>
@@ -82,8 +138,8 @@
                     </div>
                 </article>
 
-                <article class="card project" onclick="openModal('modal-Hollow')">
-                    <img src="./img/HK-capa.png" alt="Guia Hollow Knight" />
+                <article class="project" onclick="openModal('modal-Hollow')">
+                    <div class="project-thumb"><img src="./img/HK-capa.png" alt="Guia Hollow Knight" /></div>
                     <div class="project-body">
                         <h3>Guia Hollow Knight</h3>
                         <p>Um site completo com informações, mapas e segredos de Hallownest, feito para ajudar jogadores
@@ -95,45 +151,57 @@
                     </div>
                 </article>
 
-                <article class="card project" onclick="openModal('modal-abp2')">
-                    <img src="./img/ABP2-capa.png" alt="Devflow Analytics — capa" />
+                <article class="project" onclick="openModal('modal-abp2')">
+                    <div class="project-thumb"><img src="./img/ABP2-capa.png" alt="Devflow Analytics — capa" /></div>
                     <div class="project-body">
                         <h3>Devflow Analytics (ABP 2)</h3>
                         <p>Plataforma para centralizar, visualizar e disponibilizar dados limnológicos e meteorológicos
                             dos projetos sobre o Balanço de Carbono nos reservatórios de Furnas.</p>
                         <div class="chips">
-                    <span>React</span><span>TypeScript</span><span>Docker</span>
+                            <span>React</span><span>TypeScript</span><span>Docker</span>
                         </div>
                     </div>
                 </article>
 
-                <article class="card project hidden-project" onclick="openModal('modal-extra-2')">
-                    <img src="./img/Curriculo iteligente.png" alt="Currículo Inteligente" />
+
+                <article class="project hidden-project" onclick="openModal('modal-extra-3')">
+                    <div class="project-thumb"><img src="./img/ABP3-capa.jpeg" alt="Devflow CRM" /></div>
                     <div class="project-body">
-                        <h3>Currículo Inteligente</h3>
-                        <p>Criação e personalização de currículos de forma dinâmica</p>
+                        <h3>Devflow CRM (ABP 3)</h3>
+                        <p>Plataforma web de gestão de leads e análise de desempenho comercial, desenvolvida para o
+                            cliente 1000 Valle Multimarcas.</p>
                         <div class="chips">
-                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            <span>React</span><span>TypeScript</span><span>Docker</span><span>SQL</span>
                         </div>
+
                     </div>
                 </article>
 
-                <article class="card project hidden-project" onclick="openModal('modal-extra-1')">
-                    <img src="./img/Jogo-Memoria.png" alt="Jogo-Memoria" />
+
+                <article class="project hidden-project" onclick="openModal('modal-extra-2')">
+                    <div class="project-thumb"><img src="./img/Maquinario-capa.jpeg" alt="MAQUINÁRIO" /></div>
                     <div class="project-body">
-                        <h3>Jogo da Memória</h3>
-                        <p>Descrição curta do projeto extra 1.</p>
-                        <div class="chips"><span>React</span><span>TypeScript</span></div>
+                        <h3>MAQUINÁRIO</h3>
+                        <p>Um hub de minijogos com desafios variados, desde replicar padrões em um cubo até
+                            organizar uma casa contra o tempo, feito para testar reflexos e atenção do jogador.</p>
+                        <div class="chips">
+                            <span>React</span><span>TypeScript</span>
+                        </div>
+
                     </div>
                 </article>
 
-                <div class="projects-actions" style="text-align:center;margin-top:18px;">
-                    <a id="loadMoreProjects" class="btn-projeto" href="#projetos" role="button" aria-expanded="false">
-                        Ver mais projetos
-                    </a>
-                </div>
+            </div>
+
+            <div class="projects-actions" style="text-align:center;margin-top:24px;">
+                <a id="loadMoreProjects" class="btn-projeto" href="#projetos" role="button" aria-expanded="false">
+                    Ver mais projetos
+                </a>
+            </div>
 
         </section>
+
+        <div class="divider"></div>
 
         <div id="modal-abp" class="modal" aria-hidden="true">
             <div class="modal-content">
@@ -179,10 +247,11 @@
                     curiosidades sobre a história do Cavaleiro e dos outros personagens marcantes.</p>
                 <p>Mais do que um simples guia, este projeto é uma homenagem ao universo de Hollow Knight: um espaço
                     para aprender, explorar e se apaixonar ainda mais por Hallownest!</p>
-                <div class="chips"> </div>
-                <span class="btn" style="margin-top: 10px;"><span>React</span><span>TypeScript</span>
+                <div class="chips">
+                    <span>React</span><span>TypeScript</span>
                     <a href="https://soldesi.github.io/Hollow-Knight-Guia/" target="_blank" class="btn-site">Acessar
                         Site</a>
+                </div>
                 </span>
             </div>
         </div>
@@ -213,50 +282,47 @@
         <div id="modal-extra-2" class="modal" aria-hidden="true">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modal-extra-2')">&times;</span>
-                <h2>Curriculo Inteligente</h2>
-                <img src="./img/Curriculo iteligente.png" alt="Currículo Inteligente" />
+                <h2>MAQUINÁRIO</h2>
+                <img src="./img/Maquinario.jpeg" alt="MAQUINÁRIO" />
                 <h3>Sobre o projeto</h3>
-                <p>O Currículo Inteligente é uma aplicação web interativa que permite a criação e personalização de
-                    currículos de forma dinâmica, combinando design moderno com funcionalidades práticas. O objetivo
-                    principal é facilitar a geração de currículos profissionais, permitindo que o usuário configure
-                    visualmente o layout, o tema e o conteúdo, além de pré-visualizar e exportar o resultado final em
-                    PDF.</p>
-                <h3>Com ela, você pode:</h3>
-                <p>• Preencher seus dados facilmente em um formulário intuitivo;</p>
-                <p>• entre diferentes modelos de layout e temas;</p>
-                <p>• Visualizar instantaneamente uma prévia real do seu currículo;</p>
-                <p>• Exportar o resultado final em PDF ou adaptar o conteúdo para redes profissionais, como o LinkedIn.
-                </p>
-                <p>O objetivo é facilitar a criação de currículos profissionais que transmitam credibilidade e
-                    impacto, mesmo para quem não tem experiência em design.</p>
+                <p>MAQUINÁRIO é um hub de minijogos reunindo desafios rápidos e variados: em RÉPLICA você precisa
+                    memorizar e reproduzir um padrão de blocos em um cubo; em Pegue a Galinha, reflexos são testados
+                    ao identificar a galinha certa em meio à correria; em Faxina Frenética, a missão é organizar
+                    objetos no lugar certo contra o relógio; em Pizza Perfeita, a ordem dos ingredientes precisa ser
+                    seguida à risca; e em Estoure o Balão, é preciso estourar apenas os balões da cor indicada em
+                    meio a uma tela cheia de cores.</p>
+                <p>Desenvolvido em React, o projeto foi pensado para crescer com o tempo, recebendo novos jogos e
+                    desafios ao hub conforme são criados.</p>
                 <div class="chips">
-                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    <span>React</span><span>TypeScript</span>
+                    <a href="#" target="_blank" class="btn-site">Acessar
+                        Site</a>
                 </div>
             </div>
         </div>
 
-        <div id="modal-extra-1" class="modal" aria-hidden="true">
+        <div id="modal-extra-3" class="modal" aria-hidden="true">
             <div class="modal-content">
-                <span class="close" onclick="closeModal('modal-extra-1')">&times;</span>
-                <h2>Jogo da Memória</h2>
-                <img src="./img/memoria-acerto.png" alt="Jogo-Memoria" />
+                <span class="close" onclick="closeModal('modal-extra-3')">&times;</span>
+                <h2>Devflow CRM (ABP 3)</h2>
+                <img src="./img/ABP3-capa.jpeg" alt="Devflow CRM" />
                 <h3>Sobre o projeto</h3>
-                <p>O Jogo da Memória é um clássico divertido que desafia sua atenção e concentração! O objetivo é
-                    simples: encontrar os pares de cartas iguais, virando duas por vez e tentando lembrar onde cada uma
-                    está. Mas não se engane — conforme as cartas aumentam, a dificuldade também cresce, tornando cada
-                    rodada ainda mais empolgante.</p>
-                <p>O diferencial do nosso jogo está no design moderno e na jogabilidade fluida: as cartas possuem
-                    animações de virar, o tabuleiro é responsivo e o sistema acompanha seus acertos e movimentos em
-                    tempo real. Cada partida é rápida, envolvente e sempre traz aquela vontade de jogar “só mais uma
-                    vez”.</p>
-                <p>O Jogo da Memória é fácil de aprender, acessível para todas as idades e perfeito tanto para passar o
-                    tempo quanto para treinar o cérebro de forma leve e divertida!</p>
-                <div class="chips"><span>React</span><span>TypeScript</span></div>
+                <p>O Devflow CRM é uma plataforma web de gestão de leads e análise de desempenho comercial,
+                    desenvolvida pela equipe DevFlow em parceria com o cliente 1000 Valle Multimarcas, uma
+                    concessionária de veículos.</p>
+                <p>Neste projeto, atuei como Product Owner, cuidando de toda a parte burocrática do desenvolvimento:
+                    não codei nada, mas fui responsável pela elaboração das user stories, casos de uso, diagramas e
+                    demais artefatos que normalmente cabem a um P.O., garantindo alinhamento entre as necessidades do
+                    cliente e o que a equipe de desenvolvimento entregava.</p>
+                <div class="chips">
+                    <span>React</span><span>TypeScript</span>
+                </div>
             </div>
         </div>
 
         <section id="habilidades" class="section">
             <div class="section-head">
+                <p class="eyebrow">Skills</p>
                 <h2>Habilidades</h2>
             </div>
             <div class="skills-grid">
@@ -287,8 +353,11 @@
             </div>
         </section>
 
+        <div class="divider"></div>
+
         <section id="contato" class="section">
             <div class="section-head">
+                <p class="eyebrow">Fale comigo</p>
                 <h2>Contato</h2>
             </div>
 
@@ -364,25 +433,43 @@
             </div>
         </section>
 
-        <div class="section-head">
-            <h2>Links</h2>
-        </div>
+        <div class="divider"></div>
 
-        <ul class="skills card links-final">
-            <a href="https://github.com/Soldesi">Github</a>
-            <a href="https://www.linkedin.com/in/matheus-soldesi-790122372/">Linkedin</a>
-        </ul>
+        <section class="section" aria-label="Links">
+            <div class="section-head">
+                <p class="eyebrow">Redes</p>
+                <h2>Links</h2>
+            </div>
 
-        <div class="actions">
-            <a class="btn-curriculo " href="./curriculo.pdf" download="Curriculo-Matheus-Soldesi.pdf">
-                📄 Baixar Currículo
-            </a>
-        </div>
+            <ul class="arrow-list">
+                <li><a href="https://github.com/Soldesi" target="_blank" rel="noopener">
+                        <span>Github</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a></li>
+                <li><a href="https://www.linkedin.com/in/matheus-soldesi-790122372/" target="_blank" rel="noopener">
+                        <span>LinkedIn</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a></li>
+                <li><a href="./curriculo.pdf" download="Curriculo-Matheus-Soldesi.pdf">
+                        <span>Baixar Currículo (PDF)</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4V16M12 16L7 11M12 16L17 11M5 20H19" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a></li>
+            </ul>
+        </section>
 
     </main>
 
     <footer class="footer">
-        <div class="container">
+        <div class="footer-inner">
             <p>© <span id="ano"></span> Matheus da Cunha Soldesi — Desenvolvedor Front-End. Todos os direitos
                 reservados.
             </p>
